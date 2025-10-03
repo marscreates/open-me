@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding: 50px;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 5em;
+      color: #fff;
+      text-shadow: 0 0 10px #ff69b4, 0 0 20px #ff69b4;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #ff69b4; }
+      to { text-shadow: 0 0 20px #ff1493; }
+    }
+
+    p {
+      font-size: 2em;
+      color: #333;
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #ff69b4;
+      animation: fall 3s infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0); opacity: 1; }
+      100% { transform: translateY(600px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Happieee 18 !! 🎉</h1>
+  <p>Heyyy !!! <br>so  its ur Birthday todayyy!!! Pumpkin ?? someone?? noone?? idk anyway,YOU turned 18 !!!! <br>  big gym boyyy now ig  <br> How you doing ??? I  dont k whats happening there  <br> do believe u r fine:) <br> BE HAPPY AND HAVE PEACE IN LIFE ,no headache from last few monthss ,so enough nd more time to focus on u , note : behave welll ... <br> pray, be good , kind , respect ( specially women, ik u hate saying it ,whatever....) <br> and kurach mandhi (junk food) kazhicha mathi , i wont have time to come for a funeral when u r 45-50 years old ...  remember ordinary wishes not my style so yeahh ... do smile now <br>                                                                                                                                                               BYE . </p>
+
+  <!-- Confetti -->
+  <script>
+    for (let i = 0; i < 100; i++) {
+      let confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * window.innerWidth + 'px';
+      confetti.style.top = Math.random() * -100 + 'px';
+      confetti.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+      confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
